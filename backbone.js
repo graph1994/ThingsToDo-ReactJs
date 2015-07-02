@@ -1,6 +1,7 @@
 
 var TasksModel = Backbone.Model.extend({
-  urlRoot: '/tasks'
+  urlRoot: '/tasks',
+  idAttribute: '_id'
 });
 var TasksCollection = Backbone.Collection.extend({
   model: TasksModel,
@@ -13,9 +14,6 @@ tasksFetch.toJSON();
 tasksFetch.fetch({
   success: function(response) {
               data = response.toJSON();
-
-
-
           }
 });
 
